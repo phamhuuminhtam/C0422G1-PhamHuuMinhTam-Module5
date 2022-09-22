@@ -36,6 +36,79 @@
     </style>
 </head>
 <body>
+
+<div class="container-fluid" id="topHeader">
+    <div class="row header">
+        <div class="row">
+            <div class="col-lg-2 d-flex justify-content-center mb-2 mt mt-2">
+                <img  src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png" alt="logo ">
+            </div>
+
+            <div class="col-lg-10 d-flex justify-content-end align-items-center">
+                <button class="btn btn-success me-3"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="height: 40px">Đăng nhập</button>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="height: 40px">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-success sticky-top">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto  mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href='/'>Trang chủ</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-white" href="/employee"  role="button"  aria-expanded="false">
+                        Nhân Viên
+                    </a>
+
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-white"  href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Khách Hàng
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href='/customer'>Danh sách khách hàng</a></li>
+                        <li><a class="dropdown-item" href='/contract/present'>Danh sách khách hàng đang sử dụng dịch vụ</a></li>
+                        <li><a class="dropdown-item" href='/customer/addForm'>Thêm mới khách hàng</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" onclick="location.href='/facility'">Danh sách dịch vụ</a></li>
+                        <li><a class="dropdown-item" href='/facility/addForm'>Thêm mới dịch vụ</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="/contract" id="navbarDropdown" role="button"  aria-expanded="false">
+                        Hợp Đồng
+                    </a>
+                </li>
+
+            </ul>
+
+            <form class="d-flex align-content-center mb-0"  method="get" name="myForm">
+                <input class="form-control " type="search" placeholder="Tìm kiếm" aria-label="Search" name="keyWord">
+                <button class="btn btn-success" type="submit">Tìm</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
 <div class="container-fluid" id="tableList">
     <h2 CLASS="text-center">DANH SÁCH KHÁCH HÀNG</h2>
     <div class="row main mt-2 ">
