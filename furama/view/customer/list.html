@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/mystyle/mycss.css">
+    <style>
+        #tableList {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            background-image:url("https://images.pexels.com/photos/825904/pexels-photo-825904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #exampleModal{
+            background-color:rgba(0,0,0,0.4);
+        }
+        #modalTest{
+            background: linear-gradient(to right, #d9a7c7, #fffcdc);
+
+        }
+        #cancelButton{
+            animation: cancelButton 0.8s infinite;
+        }
+        @keyframes cancelButton {
+            from {
+                box-shadow:0 0 2px red;
+            }
+            to {
+                box-shadow:0 0 50px red;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid" id="tableList">
+    <h2 CLASS="text-center">DANH SÁCH KHÁCH HÀNG</h2>
+    <div class="row main mt-2 ">
+        <table class="table table-striped table-hover" id="tableCustomer">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Số CMND</th>
+                <th>Số Điện Thoại</th>
+                <th>Email</th>
+                <th>Loại khách</th>
+                <th>Địa chỉ</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a type="button" class="btn btn-primary">
+                        Sửa
+                    </a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                           onclick="showModalDelete('a','b')">
+                        Xóa
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <form action="/customer/delete" method="post">
+            <div class="modal-content" id="modalTest">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container-fluid">
+                    Bạn xác nhận muốn xóa khách hàng: <span id="delete_modal"></span>
+                    <input type="hidden" id="sendId" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelButton">Hủy</button>
+                    <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Xóa</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalAlert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/customer?action=deleteCustomer" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container-fluid">
+                    <p id="modalAlertMes"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function showModalDelete(a, b) {
+        document.getElementById("delete_modal").innerText = b;
+        document.getElementById("sendId").value = a;
+
+    }
+</script>
+
+<script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
