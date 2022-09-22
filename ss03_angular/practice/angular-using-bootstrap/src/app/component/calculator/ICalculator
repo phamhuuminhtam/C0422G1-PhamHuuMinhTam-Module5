@@ -1,0 +1,7 @@
+import {Interface} from 'readline';
+
+export interface ICalculator {
+  number1?: number;
+  number2?: number;
+  operator: string;
+}
