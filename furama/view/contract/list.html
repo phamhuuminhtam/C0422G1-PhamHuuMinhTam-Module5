@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contract</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/mystyle/mycss.css">
+</head>
+<body>
+<div class="container">
+    <a href="/contract/add" style="position: fixed;right: 0" type="button" class="btn btn-success mt-1">
+        THÊM MỚI HỢP ĐỒNG
+    </a>
+    <h2 CLASS="text-center">DANH SÁCH HỢP ĐỒNG</h2>
+    <div class="row main mt-2 ">
+        <table class="table table-striped">
+            <tr>
+
+                <th>STT</th>
+                <th>Dịch vụ</th>
+                <th>Khách hàng</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <th>Tiền đặt cọc</th>
+                <th>Tổng tiền</th>
+                <th>Các dịch vụ đi kèm</th>
+
+            </tr>
+            <tr >
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal"
+                            data-bs-target="#addContactDetail"
+                            onclick=showModalAddAttachFacility()>
+                        +
+                    </button>
+                    <button type="button" class="btn btn-primary"
+                           onclick=showModalDetailAttach()>
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+    <a class="btn btn-primary" > Previous</a>
+    <span ></span>/<span></span>
+    <a class="btn btn-primary"  > Next</a>
+</div>
+
+
+<!-- Modal-->
+
+
+<div class="modal fade" id="attachFacility" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalEditLable">DANH SÁCH DỊCH VỤ ĐI KÈM</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body container-fluid">
+                <table class="table table-striped">
+                    <tr>
+                        <th>#</th>
+                        <th>Tên dịch vụ đi kèm</th>
+                        <th>Đơn vị</th>
+                        <th>Giá tiền</th>
+                        <th>Số lượng</th>
+                    </tr>
+                    <tbody id="attachBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="addContactDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">THÊM DỊCH VỤ ĐI KÈM</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Tên dịch vụ đi kèm</th>
+                            <th>Đơn vị</th>
+                            <th>Giá tiền</th>
+                            <th>Số lượng</th>
+                        </tr>
+                        <tbody id="addAttachFacility">
+
+                        </tbody>
+
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" onclick="getAttachFacilityObject()">Thêm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>

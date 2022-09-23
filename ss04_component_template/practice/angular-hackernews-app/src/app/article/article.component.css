@@ -1,0 +1,17 @@
+#exampleModal{
+  background-color:rgba(0,0,0,0.4);
+}
+#modalTest{
+  background: linear-gradient(to right, #d9a7c7, #fffcdc);
+}
+#cancelButton{
+  animation: cancelButton 0.8s infinite;
+}
+@keyframes cancelButton {
+  from {
+    box-shadow:0 0 2px red;
+  }
+  to {
+    box-shadow:0 0 50px red;
+  }
+}
