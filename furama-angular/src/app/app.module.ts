@@ -8,6 +8,9 @@ import { NavbarComponent } from './header/navbar/navbar.component';
 import { HomeComponent } from './home/home/home.component';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { FacilityListComponent } from './facility/facility-list/facility-list.component';
+import { FacilityEditComponent } from './facility/facility-edit/facility-edit.component';
+import { FacilityAddComponent } from './facility/facility-add/facility-add.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CustomerEditComponent } from './customer/customer-edit/customer-edit.co
     NavbarComponent,
     HomeComponent,
     CustomerAddComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    FacilityListComponent,
+    FacilityEditComponent,
+    FacilityAddComponent
   ],
   imports: [
     BrowserModule
