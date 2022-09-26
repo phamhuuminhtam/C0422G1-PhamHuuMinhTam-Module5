@@ -11,6 +11,8 @@ import { CustomerEditComponent } from './customer/customer-edit/customer-edit.co
 import { FacilityListComponent } from './facility/facility-list/facility-list.component';
 import { FacilityEditComponent } from './facility/facility-edit/facility-edit.component';
 import { FacilityAddComponent } from './facility/facility-add/facility-add.component';
+import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { FacilityAddComponent } from './facility/facility-add/facility-add.compo
     CustomerEditComponent,
     FacilityListComponent,
     FacilityEditComponent,
-    FacilityAddComponent
+    FacilityAddComponent,
+    FacilityDetailComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
