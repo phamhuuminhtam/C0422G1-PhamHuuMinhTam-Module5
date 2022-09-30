@@ -7,13 +7,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FormRegisComponent} from './form-regis/form-regis.component';
 import {Form2Component} from './form2/form2.component';
 import {LoginUserComponent} from './login-user/login-user.component';
+import { TimelinesComponent } from './timelines/timelines.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormRegisComponent,
     Form2Component,
-    LoginUserComponent
+    LoginUserComponent,
+    TimelinesComponent
   ],
   imports: [
     BrowserModule,

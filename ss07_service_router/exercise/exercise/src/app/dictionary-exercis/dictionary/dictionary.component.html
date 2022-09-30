@@ -1,0 +1,5 @@
+<h2>DICTIONARY</h2>
+<div *ngFor="let dic of dictionary">
+  <p><a [routerLink]='["",dic.word]'>{{dic.word}}: </a>{{dic.mean}}</p>
+</div>
+<button [routerLink]="['/product/list']">Đi tới bài khác</button>
