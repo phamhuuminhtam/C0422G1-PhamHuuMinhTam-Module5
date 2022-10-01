@@ -1,0 +1,58 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "bánh mỳ",
+      "price": 20000,
+      "description": "ăn ngay",
+      "category": {
+        "id": 1,
+        "name": "bánh"
+      }
+    },
+    {
+      "id": 2,
+      "name": "bánh bao",
+      "price": 30000,
+      "description": "ăn sau",
+      "category": {
+        "id": 2,
+        "name": "kẹo"
+      }
+    },
+    {
+      "id": 3,
+      "name": "bánh quy",
+      "price": 40000,
+      "description": " ko ăn được ",
+      "category": {
+        "id": 3,
+        "name": "nước"
+      }
+    },
+    {
+      "id": 4,
+      "name": "bánh gì cũng được",
+      "price": "20000",
+      "description": "hi",
+      "category": {
+        "id": 3,
+        "name": "nước"
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "bánh"
+    },
+    {
+      "id": 2,
+      "name": "kẹo"
+    },
+    {
+      "id": 3,
+      "name": "nước"
+    }
+  ]
+}

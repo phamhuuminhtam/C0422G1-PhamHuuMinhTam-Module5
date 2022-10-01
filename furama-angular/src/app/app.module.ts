@@ -13,6 +13,8 @@ import { FacilityEditComponent } from './facility/facility-edit/facility-edit.co
 import { FacilityAddComponent } from './facility/facility-add/facility-add.component';
 import { FacilityDetailComponent } from './facility/facility-detail/facility-detail.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {AppRootingModule} from "./app-rooting.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {FormsModule} from "@angular/forms";
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+      HttpClientModule,
+      AppRootingModule
     ],
   providers: [],
   bootstrap: [AppComponent]
