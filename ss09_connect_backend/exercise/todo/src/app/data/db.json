@@ -1,0 +1,29 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "content": "json-server",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "content": "json",
+      "complete": true
+    },
+    {
+      "id": 3,
+      "content": "server",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "content": "json-serverr2",
+      "complete": "true"
+    },
+    {
+      "content": "tâm2",
+      "complete": false,
+      "id": 5
+    }
+  ]
+}
