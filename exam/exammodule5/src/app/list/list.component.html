@@ -1,0 +1,60 @@
+
+<button class="btn btn-success" [routerLink]="['/add']" >Thêm mới</button>
+<form [formGroup]="formSearch" *ngIf="formSearch" (ngSubmit)="search()" class="d-flex justify-content-center mt-4">
+   <input formControlName="keySearch" placeholder="Nhập tên dịch vụ" class="form-control w-50 ms-2" (ngModelChange)="search()">
+  <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+</form>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Số xe</th>
+    <th>Loại xe</th>
+    <th>Tên nhà xe</th>
+    <th>Điểm đi</th>
+    <th>Điểm đến</th>
+    <th>Số điện thoại</th>
+    <th>Email</th>
+    <th>Giờ đi</th>
+    <th>Giờ đến</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let xe of benXeList ">
+    <td>{{xe.bienSo}}</td>
+    <td>{{xe.loaiXe}}</td>
+    <td>{{xe.tenNhaXe}}</td>
+    <td>{{xe.diemDi.name}}</td>
+    <td>{{xe.diemDen.name}}</td>
+    <td>{{xe.soDienThoai}}</td>
+    <td>{{xe.email}}</td>
+    <td>{{xe.gioKhoiHanh }}</td>
+    <td>{{xe.gioDen}}</td>
+    <td><button class="btn btn-success" [routerLink]="['/edit',xe.id]">sửa</button>
+      <button class="btn btn-danger" (click)="getIdDelete(xe)" data-bs-toggle="modal" data-bs-target="#exampleModal">Xóa
+    </button></td>
+  </tr>
+  </tbody>
+</table>
+
+<a *ngIf="currenPage" (click)="prePage()" class="btn btn-success d-inline-block" >Previous</a>
+<span *ngIf="currenPage">{{currenPage + 1}}/{{pageTotal}}</span>
+<a *ngIf="currenPage!=pageTotal - 1" (click)="nextPage()"  class="btn btn-success d-inline-block">Next</a>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" *ngIf="xeDelete">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p > Bạn xác nhận xóa chuyến xe: {{xeDelete.bienSo}} và giờ khởi hành {{xeDelete.gioKhoiHanh}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteXe(xeDelete)" data-bs-dismiss="modal">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container">
+<form class="row g-3" [formGroup]="xeForm" *ngIf="xeForm"  (ngSubmit)="submit()">
+   <div>
+    <label class="form-label">Biển số</label>
+     <input readonly class="form-control" type="text" value="{{bienSo}}" >
+
+  </div>
+  <div>
+    <label  class="form-label">Loại xe</label>
+    <input class="form-control" type="text" formControlName="loaiXe">
+    <div class="text-danger"
+         *ngIf="xeForm.controls.loaiXe.hasError('required') && (xeForm.controls.loaiXe.dirty ||xeForm.controls.loaiXe.touched)">
+      Vui lòng nhập
+    </div>
+  </div>
+  <div>
+    <label  class="form-label">Tên nhà xe</label>
+    <input class="form-control" type="text" formControlName="tenNhaXe">
+    <div class="text-danger"
+         *ngIf="xeForm.controls.tenNhaXe.hasError('required') && (xeForm.controls.tenNhaXe.dirty ||xeForm.controls.tenNhaXe.touched)">
+      Vui lòng nhập
+    </div>
+  </div>
+<div>
+  <label class="form-label">Điểm đi</label>
+  <select class="form-select" formControlName="diemDi">
+    <option *ngFor="let di of diemDi" [value]="di.id" >{{di.name}}</option>
+  </select>
+</div>
+  <div>
+    <label  class="form-label">Điểm đến</label>
+    <select class="form-select" formControlName="diemDen">
+      <option *ngFor="let den of diemDen" [value]="den.id" >{{den.name}}</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="form-label">Số điện thoại</label>
+    <input class="form-control" type="text" formControlName="soDienThoai">
+    <div class="text-danger"
+         *ngIf="xeForm.controls.soDienThoai.hasError('required') && (xeForm.controls.soDienThoai.dirty ||xeForm.controls.soDienThoai.touched)">
+      Vui lòng nhập
+    </div>
+    <div class="text-danger"
+         *ngIf="xeForm.controls.soDienThoai.hasError('pattern') && (xeForm.controls.soDienThoai.dirty ||xeForm.controls.soDienThoai.touched)">
+      Vui lòng đung định dạng
+    </div>
+  </div>
+  <div>
+    <label  class="form-label">Email</label>
+    <input class="form-control" type="text" formControlName="email">
+    <div class="text-danger"
+         *ngIf="xeForm.controls.email.hasError('required') && (xeForm.controls.email.dirty ||xeForm.controls.email.touched)">
+      Vui lòng nhập
+    </div>
+
+  </div>
+  <div>
+    <label  class="form-label">Giờ khởi hành</label>
+    <input class="form-control" type="time" formControlName="gioKhoiHanh">
+  </div>
+  <div>
+    <label  class="form-label">Giờ đến</label>
+    <input class="form-control" type="time" formControlName="gioDen">
+  </div>
+
+
+  <button class="btn btn-success" type="submit" (click)="eidt()" >Submit</button>
+  <button class="btn btn-success" [routerLink]="['']" >Quay lại trang list</button>
+</form>
+</div>

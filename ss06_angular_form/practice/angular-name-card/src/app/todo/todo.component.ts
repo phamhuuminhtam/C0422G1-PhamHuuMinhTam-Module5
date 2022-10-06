@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Todo} from '../todo';
 import {FormControl} from '@angular/forms'
+import {HttpClient} from "@angular/common/http";
+import {TodoService} from "../service/todo.service";
 
 let _id = 1;
 
@@ -13,7 +15,10 @@ export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   content = new FormControl();
 
-  constructor() {
+  constructor(private http: HttpClient, private todoService: TodoService) {
+    todoService.findAll().subscribe(next => {
+      this.todos = next;
+    })
   }
 
   ngOnInit() {

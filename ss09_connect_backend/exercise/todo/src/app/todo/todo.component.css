@@ -1,3 +1,39 @@
 .complete {
   text-decoration: line-through;
 }
+
+#content:hover {
+  background-color: aqua;
+}
+
+@keyframes action {
+  form {
+    background-color: aqua;
+
+  }
+  to {
+    background-color: red;
+  }
+}
+
+@keyframes action-e {
+  form {
+    background-color: aqua;
+
+  }
+  to {
+    background-color: greenyellow;
+  }
+}
+#content:has(.d-button:hover) {
+  animation-name: action;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+#content:has(.edit-button:hover) {
+  animation-name: action-e;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+

@@ -1,0 +1,43 @@
+{
+  "benXe": [],
+  "diemDen": [
+    {
+      "id": 1,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 2,
+      "name": "Quảng Bình"
+    },
+    {
+      "id": 3,
+      "name": "HUế"
+    },
+    {
+      "id": 4,
+      "name": "Hà Nội"
+    }
+  ],
+  "diemDi": [
+    {
+      "id": 1,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 2,
+      "name": "Quảng Bình"
+    },
+    {
+      "id": 3,
+      "name": "HUế"
+    },
+    {
+      "id": 4,
+      "name": "Hà Nội"
+    },
+    {
+      "id": 5,
+      "name": "Đà Nẵng"
+    }
+  ]
+}
