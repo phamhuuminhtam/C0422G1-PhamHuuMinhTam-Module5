@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { DeleteComponent } from './delete/delete.component';
 import { EditComponent } from './edit/edit.component';
 import { AddComponent } from './add/add.component';
 
@@ -17,7 +16,7 @@ import { AddComponent } from './add/add.component';
   declarations: [
     AppComponent,
     ListComponent,
-    DeleteComponent,
+
     EditComponent,
     AddComponent
   ],

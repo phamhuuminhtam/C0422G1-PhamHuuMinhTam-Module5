@@ -1,7 +1,7 @@
 
 <button class="btn btn-success" [routerLink]="['/add']" >Thêm mới</button>
 <form [formGroup]="formSearch" *ngIf="formSearch" (ngSubmit)="search()" class="d-flex justify-content-center mt-4">
-   <input formControlName="keySearch" placeholder="Nhập tên dịch vụ" class="form-control w-50 ms-2" (ngModelChange)="search()">
+   <input formControlName="keySearch" placeholder="Nhập biển số" class="form-control w-50 ms-2" (ngModelChange)="search()">
   <button class="btn btn-primary" type="submit">Tìm kiếm</button>
 </form>
 <table class="table table-hover">
